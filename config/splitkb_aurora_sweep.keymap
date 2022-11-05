@@ -80,7 +80,7 @@
 		bindings = <
 		&as N1			&as N2			&as N3			&as N4			&as N5					&as N6			&as N7			&as N8			&as N9			&as N0
 		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp DOLLAR		&as MINUS		&as EQUAL		&trans			&kp SINGLE_QUOTE
-		&kp ESCAPE		&kp DELETE		&kp LBRACKET	&kp RBRACKET	&trans					&trans			&trans			&trans			&trans			&kp BSLASH
+		&kp ESCAPE		&kp DELETE		&as LBKT		&as RBKT		&trans					&trans			&trans			&trans			&trans			&kp BSLASH
 														&trans 			&trans					&trans 			&mo SETTINGS
 		>;
 		};
