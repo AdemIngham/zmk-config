@@ -89,7 +89,7 @@
 		lower_layer {
 		bindings = <
 		AS(N1)			AS(N2)			AS(N3)			AS(N4)			AS(N5)					AS(N6)			AS(N7)			AS(N8)			AS(N9)			AS(N0)
-		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp DOLLAR		AS( MINUS		AS( EQUAL		&trans			&kp SINGLE_QUOTE
+		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp DOLLAR		AS(MINUS)		AS(EQUAL)		&trans			&kp SINGLE_QUOTE
 		&kp ESCAPE		&kp DELETE		AS(LBKT)		AS(RBKT)		&trans					&trans			&trans			&trans			&trans			&kp BSLH
 														&trans 			&trans					&trans 			&mo SETTINGS
 		>;
