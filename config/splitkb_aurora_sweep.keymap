@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -19,9 +18,10 @@
 	#define SETTINGS 4
 
 &mt {
-	// flavor = "tap-preferred";
-	tapping_term_ms = <135>;
+	flavor = "balanced-preferred";
+	tapping_term_ms = <200>;
 };
+
 
 / {
     behaviors {
@@ -36,44 +36,44 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
+    // combos {
+    //     compatible = "zmk,combos";
+    //     combo_esc {
+    //         timeout-ms = <50>;
+    //         key-positions = <0 1>;
+    //         bindings = <&kp ESC>;
+    //     };
 
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
-        };
+    //     combo_tab {
+    //         timeout-ms = <50>;
+    //         key-positions = <10 11>;
+    //         bindings = <&kp TAB>;
+    //     };
 
-        combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
-        };
+    //     combo_ralt {
+    //         timeout-ms = <50>;
+    //         key-positions = <17 16>;
+    //         bindings = <&kp RALT>;
+    //     };
 
-		combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
-        };
+	// 	combo_lalt {
+    //         timeout-ms = <50>;
+    //         key-positions = <11 12>;
+    //         bindings = <&kp LALT>;
+    //     };
 
-        combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
+    //     combo_lgui {
+    //         timeout-ms = <50>;
+    //         key-positions = <12 13>;
+    //         bindings = <&kp LGUI>;
+    //     };
 
-		combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
-        };
-    };
+	// 	combo_rgui {
+    //         timeout-ms = <50>;
+    //         key-positions = <17 18>;
+    //         bindings = <&kp RGUI>;
+    //     };
+    // };
 
 	keymap {
 			compatible = "zmk,keymap";
@@ -81,7 +81,7 @@
 		default_layer {
 		bindings = <
 		&kp Q			&kp W			&kp F			&kp P			&kp B					&kp J			&kp L			&kp U			&kp Y			&kp SEMICOLON
-		&mt LSFT A		&mt LGUI R		&mt LALT S		&mt LCTRL T		&kp G					&kp M			&mt LCTRL N		&mt LALT E		&mt RGUI I		&mt RSFT O
+		&mt LSFT A		&mt LGUI R		&mt LALT S		&mt LFCTL T		&kp G					&kp M			&mt LCTL N		&mt LALT E		&mt RGUI I		&mt RSFT O
 		&kp Z			&kp X			&kp C			&kp D			&kp V					&kp K			&kp H			&as COMMA		&as DOT			&as SLASH
 														&lt NUMPAD TAB	&lt LOWER SPACE			&mt K_APP BACKSPACE	&lt RAISE ENTER
 		>;
@@ -91,7 +91,7 @@
 		bindings = <
 		&as N1			&as N2			&as N3			&as N4			&as N5					&as N6			&as N7			&as N8			&as N9			&as N0
 		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp DOLLAR		&as MINUS		&as EQUAL		&trans			&kp SINGLE_QUOTE
-		&kp ESCAPE		&kp DELETE		&kp LBKT		&kp RBKT		&trans					&trans			&trans			&trans			&trans			&kp BSLH
+		&kp ESCAPE		&kp DELETE		&kp LBRACKET	&kp RBRACKET	&trans					&trans			&trans			&trans			&trans			&kp BSLASH
 														&trans 			&trans					&trans 			&mo SETTINGS
 		>;
 		};
@@ -108,8 +108,8 @@
 		numpad_layer {
 		bindings = <
 		&trans			&kp PSCRN		&kp	SCROLLLOCK	&kp PAUSE_BREAK	&kp KP_NUM				&kp KP_MINUS	&kp KP_N7		&kp KP_N8		&kp KP_N9		&kp KP_SLASH
-		&trans			&kp INSERT		&kp HOME		&kp PG_UP		&trans					&kp KP_PLUS		&kp KP_N4		&kp KP_N5		&kp KP_N6		&kp ASTERISK
-		&trans			&kp DELETE		&kp END			&kp PG_DN		&trans					&kp KP_DOT		&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp KP_ENTER
+		&trans			&kp INSERT		&kp HOME		&kp PGUP		&trans					&kp PLUS		&kp KP_N4		&kp KP_N5		&kp KP_N6		&kp KP_ASTERISK
+		&trans			&kp DELETE		&kp END			&kp PGDOWN		&trans					&kp KP_NDOT		&kp KP_N1		&kp KP_N2		&kp KP_N3		&kp KP_ENTER
 														&trans			&trans					&trans 			&kp KP_N0
 		>;
 		};
