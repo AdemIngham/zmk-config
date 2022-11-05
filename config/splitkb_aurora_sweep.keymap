@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -81,7 +82,7 @@
 		default_layer {
 		bindings = <
 		&kp Q			&kp W			&kp F			&kp P			&kp B					&kp J			&kp L			&kp U			&kp Y			&kp SEMICOLON
-		&mt LSFT A		&mt LGUI R		&mt LALT S		&mt LFCTL T		&kp G					&kp M			&mt LCTL N		&mt LALT E		&mt RGUI I		&mt RSFT O
+		&mt LSFT A		&mt LGUI R		&mt LALT S		&mt LCTRL T		&kp G					&kp M			&mt LCTRL N		&mt LALT E		&mt RGUI I		&mt RSFT O
 		&kp Z			&kp X			&kp C			&kp D			&kp V					&kp K			&kp H			&as COMMA		&as DOT			&as SLASH
 														&lt NUMPAD TAB	&lt LOWER SPACE			&mt K_APP BACKSPACE	&lt RAISE ENTER
 		>;
@@ -92,7 +93,7 @@
 		&as N1			&as N2			&as N3			&as N4			&as N5					&as N6			&as N7			&as N8			&as N9			&as N0
 		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp DOLLAR		&as MINUS		&as EQUAL		&trans			&kp SINGLE_QUOTE
 		&kp ESCAPE		&kp DELETE		&kp LBRACKET	&kp RBRACKET	&trans					&trans			&trans			&trans			&trans			&kp BSLASH
-														&trans 			&trans					&trans 			&mo 4
+														&trans 			&trans					&trans 			&mo SETTINGS
 		>;
 		};
 
