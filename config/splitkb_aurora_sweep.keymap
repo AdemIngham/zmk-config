@@ -19,7 +19,7 @@
 	#define SETTINGS 4
 
 &mt {
-	flavor = "tap-preferred";
+	// flavor = "tap-preferred";
 	tapping_term_ms = <135>;
 };
 
