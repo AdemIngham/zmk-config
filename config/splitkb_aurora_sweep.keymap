@@ -54,8 +54,8 @@
             key-positions = <26 27>;
             bindings = <&kp K_APP>;
 		};
-		
-		combo_menu{
+
+		combo_cbackspace{
 		    timeout-ms = <50>;
             key-positions = <8 9>;
             bindings = <&kp LC(BSPC)>;
