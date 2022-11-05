@@ -17,63 +17,52 @@
 	#define NUMPAD	3
 	#define SETTINGS 4
 
-// &mt {
-// 	flavor = "balanced-preferred";
-// 	tapping_term_ms = <200>;
-// };
+&mt {
+  //  flavor = "tap-preferred";
+   // tapping_term_ms = <200>;
+};
 
 
 / {
-//     behaviors {
-//         as: auto_shift {
-//             compatible = "zmk,behavior-hold-tap";
-//             label = "AUTO_SHIFT";
-//             #binding-cells = <2>;
-//             tapping_term_ms = <135>;
-//             quick_tap_ms = <0>;
-//             flavor = "tap-preferred";
-//             bindings = <&kp>, <&kp>;
-//         };
-//     };
 
-    // combos {
-    //     compatible = "zmk,combos";
-    //     combo_esc {
-    //         timeout-ms = <50>;
-    //         key-positions = <0 1>;
-    //         bindings = <&kp ESC>;
-    //     };
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
 
-    //     combo_tab {
-    //         timeout-ms = <50>;
-    //         key-positions = <10 11>;
-    //         bindings = <&kp TAB>;
-    //     };
+         combo_tab {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp TAB>;
+        };
 
-    //     combo_ralt {
-    //         timeout-ms = <50>;
-    //         key-positions = <17 16>;
-    //         bindings = <&kp RALT>;
-    //     };
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <17 16>;
+            bindings = <&kp RALT>;
+        };
 
-	// 	combo_lalt {
-    //         timeout-ms = <50>;
-    //         key-positions = <11 12>;
-    //         bindings = <&kp LALT>;
-    //     };
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LALT>;
+        };
 
-    //     combo_lgui {
-    //         timeout-ms = <50>;
-    //         key-positions = <12 13>;
-    //         bindings = <&kp LGUI>;
-    //     };
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LGUI>;
+        };
 
-	// 	combo_rgui {
-    //         timeout-ms = <50>;
-    //         key-positions = <17 18>;
-    //         bindings = <&kp RGUI>;
-    //     };
-    // };
+       combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RGUI>;
+        };
+    };
 
 	keymap {
 			compatible = "zmk,keymap";
