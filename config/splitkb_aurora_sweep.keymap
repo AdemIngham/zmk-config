@@ -38,37 +38,37 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
 
         combo_tab {
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&kp TAB>;
         };
 
         combo_ralt {
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             key-positions = <17 16>;
             bindings = <&kp RALT>;
         };
 
         combo_lalt {
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&kp LALT>;
         };
 
         combo_lgui {
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LGUI>;
         };
 
        combo_rgui {
-            timeout-ms = <20>;
+            timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp RGUI>;
         };
@@ -89,7 +89,7 @@
 		lower_layer {
 		bindings = <
 		AS(N1)			AS(N2)			AS(N3)			AS(N4)			AS(N5)					AS(N6)			AS(N7)			AS(N8)			AS(N9)			AS(N0)
-		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp DOLLAR		AS(MINUS)		AS(EQUAL)		&trans			&kp SINGLE_QUOTE
+		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp GRAVE		AS(MINUS)		AS(EQUAL)		&trans			&kp SINGLE_QUOTE
 		&kp ESCAPE		&kp DELETE		AS(LBKT)		AS(RBKT)		&trans					&trans			&trans			&trans			&trans			&kp BSLH
 														&trans 			&trans					&trans 			&mo SETTINGS
 		>;
