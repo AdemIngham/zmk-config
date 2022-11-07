@@ -61,12 +61,6 @@
             bindings = <&kp LC(BSPC)>;
 		};
 
-		combo_cbackspace{
-		    timeout-ms = <50>;
-            key-positions = <8 9>;
-            bindings = <&kp LC(BSPC)>;
-		};
-
 		combo_cut{
 		    timeout-ms = <50>;
             key-positions = <20 21>;
