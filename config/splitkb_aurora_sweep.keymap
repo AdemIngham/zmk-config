@@ -105,6 +105,13 @@
             bindings = <AS(BACKSLASH)>;
 			layers = <0>;
 		};
+
+		combo_capslock{
+		    timeout-ms = <30>;
+            key-positions = <10 19>;
+            bindings = <&kp CAPS>;
+			layers = <0>;
+		};
 		};
     };
 
@@ -131,11 +138,11 @@
 		raise_layer {
 		bindings = <
 		&kp F1			&kp F2			&kp F3			&kp F4			&trans					&kp C_VOLUME_UP	&kp HOME 			&kp PG_DN 	&kp PG_UP		&kp END
-		&kp F5			&kp F6			&kp F7			&kp F8			&trans					&mt C_PLAY_PAUSE C_PLAY	&kp LEFT	&kp DOWN	&kp UP			&kp RIGHT
+		&kp F5			&kp F6			&kp F7			&kp F8			&trans					&kp C_PLAY	&kp LEFT	&kp DOWN	&kp UP			&kp RIGHT
 		&kp F9			&kp F10			&kp F11			&kp F12			&trans	 				&kp C_VOLUME_DOWN	&trans		&trans			&trans			&trans
 														&kp DELETE		&trans					&trans			&trans
 		>;
-		};
+		}
 
 		numpad_layer {
 		bindings = <
