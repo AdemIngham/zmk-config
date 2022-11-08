@@ -102,7 +102,7 @@
 		combo_backslash{
 		    timeout-ms = <30>;
             key-positions = <28 29>;
-            bindings = <AS(BACKSLASH)>;
+            bindings = <AS(BSLH)>;
 			layers = <0>;
 		};
 
