@@ -130,7 +130,7 @@
 		bindings = <
 		AS(N1)			AS(N2)			AS(N3)			AS(N4)			AS(N5)					AS(N6)			AS(N7)			AS(N8)			AS(N9)			AS(N0)
 		&kp LEFT_BRACE	&kp RIGHT_BRACE	&kp LPRN		&kp RPRN 		&trans					&kp GRAVE		AS(MINUS)		AS(EQUAL)		&trans			&kp SINGLE_QUOTE
-		&kp ESCAPE		&kp DELETE		&kp LBKT		&kp RBKT		&trans					&trans			&trans			&trans			&trans			&kp BSLH
+		&kp ESCAPE		&kp DELETE		&kp LBKT		&kp RBKT		&trans					&trans			&trans			&trans			&trans			AS(BSLH)
 														&trans 			&trans					&trans 			&mo SETTINGS
 		>;
 		};
@@ -142,7 +142,7 @@
 		&kp F9			&kp F10			&kp F11			&kp F12			&trans	 				&kp C_VOLUME_DOWN	&trans		&trans			&trans			&trans
 														&kp DELETE		&trans					&trans			&trans
 		>;
-		}
+		};
 
 		numpad_layer {
 		bindings = <
