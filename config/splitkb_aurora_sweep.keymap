@@ -51,6 +51,13 @@
 			layers = <0>;
 		};
 
+		combo_close{
+			timeout-ms = <30>;
+			key-positions = <5 6>;
+			bindings = <&kp LA(F4)>;
+			layers = <0>;
+		};
+
 		combo_lock{
 			timeout-ms = <30>;
 			key-positions = <6 7 8>;
