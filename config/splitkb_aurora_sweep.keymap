@@ -51,6 +51,13 @@
 			layers = <0>;
 		};
 
+		combo_snip {
+			timeout-ms = <30>;
+			key-positions = <2 3>;
+			bindings = <&kp LS(LG(S))>;
+			layers = <0>;
+		};
+
 		combo_close{
 			timeout-ms = <30>;
 			key-positions = <5 6>;
@@ -128,7 +135,7 @@
 			layers = <0>;
 		};
 
-		combo_capslock{
+	combo_capslock{
 			timeout-ms = <30>;
 			key-positions = <12 13>;
 			bindings = <&kp CAPS>;
