@@ -16,6 +16,7 @@
 	#define SETTINGS 4
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 &mt {
 	flavor = "tap-preferred";
@@ -24,7 +25,15 @@
 
 / {
 	behaviors {
-		as: auto_shift {
+		        mo_tog: behavior_mo_tog {
+			compatible = "zmk,behavior-hold-tap";
+			label = "mo_tog";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&tog>;
+		};
+			as: auto_shift {
 			compatible = "zmk,behavior-hold-tap";
 			label = "AUTO_SHIFT";
 			#binding-cells = <2>;
@@ -154,7 +163,7 @@
 			// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 				&kp Z		&kp X		&kp C		&kp D		&kp V		&kp K		&kp H		AS(COMMA)	AS(DOT)		AS(SLASH)
 			// ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┤├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-										&mo NUMPAD	&lt LOWER SPACE	&kp BACKSPACE	&lt RAISE ENTER
+										MO_TOG(NUMPAD)	&lt LOWER SPACE	&kp BACKSPACE	&lt RAISE ENTER
 			// 						   ╰───────────────┴───────────────╯╰───────────────┴───────────────╯
 				>;
 		};
