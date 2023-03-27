@@ -16,6 +16,7 @@
 	#define SETTINGS 4
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 &mt {
 	flavor = "tap-preferred";
@@ -24,7 +25,15 @@
 
 / {
 	behaviors {
-		as: auto_shift {
+		        mo_tog: behavior_mo_tog {
+			compatible = "zmk,behavior-hold-tap";
+			label = "mo_tog";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&tog>;
+		};
+			as: auto_shift {
 			compatible = "zmk,behavior-hold-tap";
 			label = "AUTO_SHIFT";
 			#binding-cells = <2>;
@@ -154,7 +163,7 @@
 			// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 				&kp Z		&kp X		&kp C		&kp D		&kp V		&kp K		&kp H		AS(COMMA)	AS(DOT)		AS(SLASH)
 			// ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┤├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-										&mo NUMPAD	&lt LOWER SPACE	&kp BACKSPACE	&lt RAISE ENTER
+										MO_TOG(NUMPAD)	&lt LOWER SPACE	&kp BACKSPACE	&lt RAISE ENTER
 			// 						   ╰───────────────┴───────────────╯╰───────────────┴───────────────╯
 				>;
 		};
@@ -190,7 +199,7 @@
 		numpad_layer {
 			bindings = <
 			// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-				&tog NUMPAD	&kp PSCRN	&kp SCROLLLOCK	&kp PAUSE_BREAK	&kp KP_NUM	&kp KP_MINUS	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_SLASH
+				&trans		&kp PSCRN	&kp SCROLLLOCK	&kp PAUSE_BREAK	&kp KP_NUM	&kp KP_MINUS	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_SLASH
 			// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
 				&trans		&kp INSERT	&kp HOME	&kp PGUP	&trans		&kp PLUS	&kp KP_N4	&kp KP_N5	&kp KP_N6	&kp KP_ASTERISK
 			// ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
