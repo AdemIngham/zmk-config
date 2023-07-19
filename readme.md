@@ -1,3 +1,4 @@
+| Hardware | |
 |:--:|:--:|
 |My layout| Colemak[DH]|
 |Keyboard| [Aurora Sweep](https://splitkb.com/products/aurora-sweep)|
