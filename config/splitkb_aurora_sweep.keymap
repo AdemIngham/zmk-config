@@ -145,11 +145,11 @@
 		};
 
 		combo_capslock{
-				timeout-ms = <30>;
-				key-positions = <12 13>;
-				bindings = <&kp CAPS>;
-				layers = <1 2>;
-			};
+			timeout-ms = <30>;
+			key-positions = <12 13>;
+			bindings = <&kp CAPS>;
+			layers = <1 2>;
+		};
 	};
 
 	keymap {
