@@ -18,4 +18,4 @@ This keyboard layout has been working quite well for me. Moving the `Tab` and `S
 
 Been thinking about adjusting the keypress settings to somthing more balanced but haven't really had the time to compare between the settings.
 
-![Keyboard layout](https://github.com/AdemIngham/zmk-config/blob/main/documentation/my_keymap.svg)
+[![Keyboard layout created with keymap-drawer](https://github.com/AdemIngham/zmk-config/blob/main/documentation/my_keymap.svg)](https://keymap-drawer.streamlit.app/)
