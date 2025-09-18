@@ -38,7 +38,7 @@
 			label = "AUTO_SHIFT";
 			#binding-cells = <2>;
 			tapping_term_ms = <125>;
-			quick_tap_ms = <0>;
+			quick_tap_ms = <10>;
 			flavor = "tap-preferred";
 			bindings = <&kp>, <&kp>;
 		};
@@ -92,14 +92,14 @@
 			timeout-ms = <30>;
 			key-positions = <10 11>;
 			bindings = <&kp TAB>;
-			layers = <0 1 2 3>;
+			layers = <1 2 3>;
 		};
 
 		combo_backtab {
 			timeout-ms = <30>;
 			key-positions = <11 12>;
 			bindings = <&kp LS(TAB)>;
-			layers = <0 1 2 3>;
+			layers = <1 2 3>;
 		};
 
 		combo_quote{
